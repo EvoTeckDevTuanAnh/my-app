@@ -5,9 +5,11 @@
   "testLibrary": "None",
   "component": {
     "default": {
-      "path": "src/screen",
+      "path": "src/layout",
       "withStyle": true,
-      "withLazy": true
+      "withLazy": true,
+      "withTest": false,
+      "withStory": false
     }
   }
 }

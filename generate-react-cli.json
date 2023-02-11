@@ -1,0 +1,13 @@
+{
+  "usesTypeScript": true,
+  "usesCssModule": true,
+  "cssPreprocessor": "scss",
+  "testLibrary": "None",
+  "component": {
+    "default": {
+      "path": "src/screen",
+      "withStyle": true,
+      "withLazy": true
+    }
+  }
+}

@@ -13,6 +13,9 @@ const HomeScreen: FC<HomeScreenProps> = () => (
         </Card>
       </div>
     </section>
+    <section id='about'>
+
+    </section>
   </div>
 );
 

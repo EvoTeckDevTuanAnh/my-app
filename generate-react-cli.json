@@ -5,9 +5,9 @@
   "testLibrary": "None",
   "component": {
     "default": {
-      "path": "src/layout",
-      "withStyle": true,
+      "path": "src/components",
       "withLazy": true,
+      "withStyle": false,
       "withTest": false,
       "withStory": false
     }

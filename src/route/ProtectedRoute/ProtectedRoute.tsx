@@ -1,7 +1,6 @@
-import React, { FC, useContext } from 'react';
-import { Link, Redirect, Route } from 'react-router-dom';
+import { FC, useContext } from 'react';
+import { Redirect, Route } from 'react-router-dom';
 import { AppContext } from '../../provider/AppContextProvider';
-import styles from './ProtectedRoute.module.scss';
 
 interface ProtectedRouteProps {
   path?: string,

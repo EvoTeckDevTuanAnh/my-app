@@ -5,6 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import { ReactRouterProvider } from './provider/ReactRouterProvider';
 import { ReactQueryProvider } from './provider/ReactQueryProvider';
 import { AppContextProvider } from './provider/AppContextProvider';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n/i18n';
+import './share/css/base.scss'
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -13,7 +16,9 @@ root.render(
     <ReactRouterProvider>
       <ReactQueryProvider>
         <AppContextProvider>
-          <App />
+          <I18nextProvider i18n={i18n}>
+            <App />
+          </I18nextProvider>
         </AppContextProvider>
       </ReactQueryProvider>
     </ReactRouterProvider>

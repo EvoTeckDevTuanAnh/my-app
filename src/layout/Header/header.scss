@@ -1,12 +1,15 @@
 .header-comp {
     position: fixed;
-    top: 10px;
-    background: bottom !important;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     z-index: 1;
+    height: 82px;
+    padding: 30px;
+    box-shadow: rgb(199 95 95 / 25%) 0px 14px 28px, rgb(186 135 135 / 22%) 0px 10px 10px;
+
     .ant-menu {
         width: 80%;
         justify-content: center;
@@ -49,4 +52,10 @@
             height: 60px;
         }
     }
+}
+.header-white {
+    background: bottom !important;
+}
+.header-when-scroll {
+    background: black !important;
 }

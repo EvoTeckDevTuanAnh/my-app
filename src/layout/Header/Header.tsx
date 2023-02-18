@@ -1,23 +1,36 @@
-import { createFromIconfontCN, UserOutlined } from '@ant-design/icons';
 import { Avatar, Badge, Dropdown, Menu, MenuProps } from 'antd';
 import { Header } from 'antd/es/layout/layout';
 import { t } from 'i18next';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { withTranslation } from 'react-i18next';
 
 import './header.scss';
 interface HeaderProps { }
-const IconFont = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
-});
 const HeaderComponent: FC<HeaderProps> = () => {
   const [current, setCurrent] = useState('home');
-
+  const [headerClass, setHeaderClass] = useState("bottom")
   const onClick: MenuProps['onClick'] = (e) => {
     console.log('click ', e);
     setCurrent(e.key);
   };
-  return <Header className='header-comp' >
+  useEffect(() => {
+    // initiate the event handler
+    window.addEventListener("scroll", (e) => {
+      if (window.scrollY > 30) {
+        setHeaderClass("header-when-scroll");
+      } else {
+        setHeaderClass("header-white");
+      }
+    });
+
+    return () => { // return a cleanup function to unregister our function since it's going to run multiple times
+      window.removeEventListener("scroll", (e) => {
+
+      });
+    };
+
+  })
+  return <Header id='header' className={'header-comp ' + headerClass} >
     <div className='logo'>
       <img src="./img/homePage/logoPage.svg" alt="" />
       Fresh air
